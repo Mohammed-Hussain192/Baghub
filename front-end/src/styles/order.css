@@ -1,4 +1,6 @@
-/* Order.css */
+/* =========================
+   Order Page Styles (BagHub)
+   ========================= */
 
 .baghub-products-section {
   max-width: 1120px;
@@ -18,14 +20,14 @@
   letter-spacing: 0.06em;
 }
 
-/* Grid to nicely display orders (like product cards) */
+/* ===== Grid Layout ===== */
 .baghub-products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
 }
 
-/* Individual order card */
+/* ===== Order Card ===== */
 .baghub-product-card {
   background: #fffbea;
   border-radius: 20px;
@@ -33,16 +35,14 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  cursor: default;
   transition: box-shadow 0.3s ease;
 }
-
 .baghub-product-card:hover,
 .baghub-product-card:focus-within {
   box-shadow: 0 22px 68px rgb(176 130 70 / 0.25);
-  outline: none;
 }
 
+/* Image */
 .baghub-product-image {
   width: 100%;
   height: 160px;
@@ -51,55 +51,46 @@
   border: 2px solid #ecd9b9;
   box-shadow: 0 6px 20px rgb(176 130 70 / 0.18);
   margin-bottom: 18px;
-  user-select: none;
 }
 
+/* Text Content */
 .baghub-product-name {
   font-weight: 800;
   font-size: 1.34rem;
   margin: 0 0 10px 0;
   color: #7c4a13;
-  letter-spacing: 0.03em;
 }
-
 .baghub-product-description {
   font-size: 1rem;
   color: #7d6742;
   margin-bottom: 12px;
   flex-grow: 1;
   line-height: 1.35;
-  user-select: text;
 }
-
 .baghub-product-price {
   font-weight: 700;
   color: #b08346;
   font-size: 1.25rem;
   margin-bottom: 14px;
-  user-select: text;
 }
-
-/* Additional order info */
-
 .baghub-order-status {
   font-weight: 700;
   font-size: 1.05rem;
   color: #9c4a2b;
-  user-select: none;
   margin-top: 6px;
 }
 
-/* No Results Message */
+/* No Results */
 .baghub-no-results {
   font-size: 1.2rem;
   color: #b08346;
   text-align: center;
   margin-top: 80px;
-  user-select: none;
 }
-/* Track Details Button */
+
+/* Track Button */
 .baghub-track-btn {
-  background-color: #4caf50; /* Green */
+  background-color: #4caf50;
   color: white;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -108,22 +99,34 @@
   font-size: 0.95rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: inline-block;
+  align-self: flex-start;
 }
-
 .baghub-track-btn:hover {
-  background-color: #43a047; /* Darker green */
+  background-color: #43a047;
   transform: translateY(-2px);
   box-shadow: 0px 4px 10px rgba(67, 160, 71, 0.3);
 }
-
 .baghub-track-btn:active {
-  transform: translateY(0px);
+  transform: translateY(0);
   box-shadow: none;
 }
 
+/* =====================
+   Responsive Adjustments
+   ===================== */
 
-/* Responsive adjustments */
+/* Tablet */
+@media (max-width: 900px) {
+  .baghub-section-title {
+    font-size: 2rem;
+    margin-bottom: 36px;
+  }
+  .baghub-products-grid {
+    gap: 26px;
+  }
+}
+
+/* Mobile Portrait */
 @media (max-width: 700px) {
   .baghub-products-grid {
     grid-template-columns: 1fr;
@@ -131,11 +134,45 @@
   }
   .baghub-product-card {
     padding: 18px 14px;
+    border-radius: 16px;
+  }
+  .baghub-product-image {
+    height: 150px;
   }
   .baghub-product-name {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
   .baghub-product-price {
-    font-size: 1.12rem;
+    font-size: 1.05rem;
+  }
+  .baghub-product-description {
+    font-size: 0.95rem;
+  }
+  .baghub-order-status {
+    font-size: 0.95rem;
+  }
+  .baghub-track-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.65rem 0;
+    font-size: 0.92rem;
+  }
+}
+
+/* Very Small Devices */
+@media (max-width: 420px) {
+  .baghub-products-section {
+    padding: 0 16px;
+    margin: 32px auto 60px;
+  }
+  .baghub-section-title {
+    font-size: 1.6rem;
+    margin-bottom: 28px;
+  }
+  .baghub-product-card {
+    padding: 14px 12px;
+  }
+  .baghub-product-image {
+    height: 140px;
   }
 }
