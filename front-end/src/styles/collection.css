@@ -1,8 +1,9 @@
-/* CollectionPage additional styles */
+/* ===============================
+   Collection Page Additional Styles
+   =============================== */
 
 .baghub-collection-hero {
   min-height: 240px;
-  /* You can add a subtle textured background or soft gradient here */
   background: linear-gradient(135deg, #f9f6f2, #f1dca7);
   border-radius: 24px;
   margin-bottom: 36px;
@@ -40,7 +41,6 @@
   transition: border-color 0.3s;
   font-family: inherit;
 }
-
 .baghub-search-input:focus {
   border-color: #b08346;
   box-shadow: 0 0 8px rgb(176 130 70 / 0.45);
@@ -59,7 +59,6 @@
   font-family: inherit;
   transition: border-color 0.3s;
 }
-
 .baghub-select:focus {
   border-color: #b08346;
   box-shadow: 0 0 8px rgb(176 130 70 / 0.42);
@@ -72,4 +71,52 @@
   text-align: center;
   margin-top: 48px;
   user-select: none;
+}
+
+/* ===============================
+   Responsive Adjustments
+   =============================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .baghub-collection-info {
+    font-size: 1rem;
+    padding: 0 16px;
+  }
+  .baghub-collection-controls {
+    gap: 16px;
+  }
+  .baghub-search-input,
+  .baghub-select {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .baghub-collection-hero {
+    min-height: 180px;
+    border-radius: 16px;
+    margin-bottom: 24px;
+  }
+  .baghub-collection-info {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+  .baghub-collection-controls {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+  .baghub-search-input,
+  .baghub-select {
+    width: 100%;
+    max-width: 100%;
+    padding: 11px 14px;
+    font-size: 0.95rem;
+  }
+  .baghub-no-results {
+    font-size: 1rem;
+    margin-top: 32px;
+  }
 }
