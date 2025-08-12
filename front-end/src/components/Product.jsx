@@ -26,7 +26,7 @@ function Product(props) {
   }
 
   try {
-    const response = await axios.get(`http://localhost:4000/addtocart/${id}`, {
+    const response = await axios.get(`https://baghub-by-mohammed.onrender.com/addtocart/${id}`, {
       params: { email }
     });
 
