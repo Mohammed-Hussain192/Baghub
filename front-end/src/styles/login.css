@@ -1,8 +1,7 @@
-/* Reset & Global */
+/* = Reset & Global = */
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   background: linear-gradient(135deg, #f9f6f2 0%, #f1dca7 100%);
@@ -10,6 +9,7 @@ body {
   color: #4a412a;
 }
 
+/* = Outer Layout = */
 .baghub-login-outer {
   display: flex;
   min-height: 100vh;
@@ -20,19 +20,19 @@ body {
   background: linear-gradient(120deg, #f3e8d3 40%, #f9f1dc 100%);
 }
 
+/* = Form Container = */
 .baghub-login-container {
   background-color: #fff;
   padding: 48px 44px 44px;
   border-radius: 18px;
   box-shadow: 0 18px 40px rgb(124 74 19 / 0.15);
   width: 400px;
-  max-width: 100vw;
+  max-width: 100%;
   animation: fadeInUp 1s ease forwards;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-
 .baghub-title {
   font-size: 2.2rem;
   font-weight: 700;
@@ -41,11 +41,9 @@ body {
   letter-spacing: 0.04em;
   margin-bottom: 8px;
 }
-
 .baghub-title span {
   color: #b08346;
 }
-
 .baghub-subtitle {
   text-align: center;
   font-size: 1rem;
@@ -55,18 +53,15 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* Form */
-
+/* = Form Fields = */
 form {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
-
 .input-with-icon {
   position: relative;
 }
-
 .input-icon {
   position: absolute;
   left: 14px;
@@ -75,9 +70,7 @@ form {
   color: #b38b40;
   font-size: 1.2rem;
   pointer-events: none;
-  user-select: none;
 }
-
 input[type="text"],
 input[type="password"] {
   width: 100%;
@@ -91,24 +84,20 @@ input[type="password"] {
   outline: none;
   color: #4a412a;
 }
-
 input[type="text"]:focus,
 input[type="password"]:focus {
   border-color: #b08346;
   box-shadow: 0 0 10px 0 rgb(176 130 70 / 0.4);
   background: #fefcf5;
 }
-
 .error-msg {
   color: #c22b2b;
   font-size: 0.91rem;
   margin-top: -10px;
   font-weight: 600;
-  letter-spacing: 0.02em;
 }
 
-/* Submit Button */
-
+/* = Submit Button = */
 .btn-submit {
   background: linear-gradient(90deg, #b08346, #7c4a13);
   border: none;
@@ -122,21 +111,16 @@ input[type="password"]:focus {
   box-shadow: 0 6px 14px rgb(124 74 19 / 0.4);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-
 .btn-submit:hover,
 .btn-submit:focus {
   background: linear-gradient(90deg, #a07632, #634217);
   box-shadow: 0 8px 20px rgb(124 74 19 / 0.6);
-  outline: none;
 }
-
 .btn-submit:active {
   transform: scale(0.98);
-  transition: transform 0.1s ease;
 }
 
-/* Hero Image Section */
-
+/* = Hero Image = */
 .baghub-hero-img {
   flex-shrink: 0;
   border-radius: 24px;
@@ -145,7 +129,6 @@ input[type="password"]:focus {
   box-shadow: 0 20px 48px rgb(124 74 19 / 0.14);
   animation: popIn 1.3s ease forwards;
 }
-
 .baghub-hero-img img {
   display: block;
   width: 100%;
@@ -154,44 +137,10 @@ input[type="password"]:focus {
   filter: saturate(1.05) brightness(1.1);
 }
 
-/* Accessibility Helper */
-.sr-only {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-/* Animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(45px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes popIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+/* = Register Prompt = */
 .register-prompt {
   margin-top: 24px;
   text-align: center;
-  user-select: none;
   font-size: 1rem;
   color: #7d6742;
   display: flex;
@@ -199,7 +148,6 @@ input[type="password"]:focus {
   align-items: center;
   gap: 10px;
 }
-
 .btn-register {
   background: #f0e3ca;
   color: #7c4a13;
@@ -211,18 +159,40 @@ input[type="password"]:focus {
   transition: background 0.25s ease, color 0.25s ease;
   font-size: 1.05rem;
   width: 130px;
-  user-select: none;
 }
-
 .btn-register:hover,
 .btn-register:focus {
   background: #b08346;
   color: #fff;
-  outline: none;
 }
 
-/* Responsive */
+/* = Accessibility Helper = */
+.sr-only {
+  position: absolute!important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
 
+/* = Animations = */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(45px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ======================
+   Responsive Adjustments
+   ====================== */
+
+/* Tablet */
 @media (max-width: 900px) {
   .baghub-login-outer {
     flex-direction: column;
@@ -237,5 +207,44 @@ input[type="password"]:focus {
     width: 100%;
     max-width: 390px;
     padding: 38px 32px 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .baghub-login-outer {
+    padding: 20px 12px;
+    gap: 24px;
+  }
+  .baghub-login-container {
+    padding: 26px 20px;
+    border-radius: 14px;
+  }
+  .baghub-title {
+    font-size: 1.7rem;
+    margin-bottom: 6px;
+  }
+  .baghub-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  input[type="text"],
+  input[type="password"] {
+    padding: 12px 12px 12px 42px;
+    font-size: 0.95rem;
+  }
+  .btn-submit {
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+  .baghub-hero-img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 16px;
+  }
+  .btn-register {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 8px 0;
   }
 }
