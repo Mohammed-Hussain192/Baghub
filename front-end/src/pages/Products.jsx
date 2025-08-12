@@ -10,7 +10,7 @@ function ProductList() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/get');
+        const response = await axios.get('https://baghub-by-mohammed.onrender.com/get');
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);
