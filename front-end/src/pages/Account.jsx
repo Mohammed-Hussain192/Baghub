@@ -20,7 +20,7 @@ const Account = () => {
 
     const fetchUserDetails = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/user", {
+        const res = await axios.get("https://baghub-by-mohammed.onrender.com/user", {
           params: { email: userEmail },
         });
         setUser(res.data);
