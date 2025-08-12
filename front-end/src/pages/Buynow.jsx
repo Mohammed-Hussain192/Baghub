@@ -25,8 +25,8 @@ const BuyNow = () => {
     const fetchData = async () => {
       try {
         const [productRes, userRes] = await Promise.all([
-          axios.get(`http://localhost:4000/product/${productId}`),
-          axios.get(`http://localhost:4000/user`, {
+          axios.get(`https://baghub-by-mohammed.onrender.com/product/${productId}`),
+          axios.get(`https://baghub-by-mohammed.onrender.com/user`, {
             params: { email: userEmail }
           })
         ]);
@@ -54,7 +54,7 @@ const BuyNow = () => {
   const onSubmit = async (data) => {
     
     try {
-      const res = await axios.post("http://localhost:4000/book-my-order", {
+      const res = await axios.post("https://baghub-by-mohammed.onrender.com/book-my-order", {
         email: userEmail,
         productId,
         ...data
