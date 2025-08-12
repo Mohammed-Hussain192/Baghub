@@ -1,4 +1,4 @@
-/* === Container === */
+/* = Container = */
 .reset-container {
   min-height: 100vh;
   background: linear-gradient(to bottom, #fff8ee, #f3e8d3);
@@ -11,7 +11,7 @@
   padding: 1rem;
 }
 
-/* === Card === */
+/* = Card = */
 .reset-form {
   background: #fff;
   padding: 2.5rem;
@@ -33,7 +33,7 @@
   letter-spacing: 0.02em;
 }
 
-/* === Fields === */
+/* = Fields = */
 label {
   font-size: 0.95rem;
   margin-bottom: 6px;
@@ -58,7 +58,7 @@ input:focus {
   box-shadow: 0 0 8px rgba(176, 130, 70, 0.35);
 }
 
-/* === Button === */
+/* = Button = */
 .reset-submit {
   background: linear-gradient(90deg, #7c4a13, #b08346);
   color: #fff;
@@ -84,7 +84,7 @@ input:focus {
   box-shadow: none;
 }
 
-/* === Messages === */
+/* = Messages = */
 .reset-message {
   margin-top: 1rem;
   font-size: 0.9rem;
@@ -104,4 +104,49 @@ input:focus {
   background: rgba(176, 59, 46, 0.12);
   color: #a33a2e;
   border: 1px solid #a33a2e;
+}
+
+/* ============================
+   Responsive Adjustments
+   ============================ */
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .reset-form {
+    padding: 2rem;
+  }
+  .reset-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .reset-container {
+    padding: 0.8rem;
+  }
+  .reset-form {
+    padding: 1.5rem;
+    border-radius: 14px;
+  }
+  .reset-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  label {
+    font-size: 0.9rem;
+  }
+  input {
+    font-size: 0.9rem;
+    padding: 0.65rem;
+  }
+  .reset-submit {
+    font-size: 0.95rem;
+    padding: 0.75rem;
+    border-radius: 10px;
+  }
+  .reset-message {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
 }
