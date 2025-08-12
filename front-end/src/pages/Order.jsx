@@ -18,7 +18,7 @@ function Order() {
           return;
         }
 
-        const response = await axios.get('http://localhost:4000/order', {
+        const response = await axios.get('https://baghub-by-mohammed.onrender.com/order', {
           params: { email }
         });
 
