@@ -23,7 +23,7 @@ const Cart = () => {
 
     const fetchCartItems = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/cart", {
+        const response = await axios.get("https://baghub-by-mohammed.onrender.com/cart", {
           params: { email: userEmail },
         });
 
@@ -53,7 +53,7 @@ const Cart = () => {
 
     try {
       const response = await axios.delete(
-        "http://localhost:4000/cart/remove",
+        "https://baghub-by-mohammed.onrender.com/cart/remove",
         {
           data: { email: userEmail, id: productId },
         }
