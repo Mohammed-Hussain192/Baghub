@@ -1,3 +1,6 @@
+/* =========================
+   Admin Panel Base Styles
+   ========================= */
 .admin-container {
   padding: 30px;
   max-width: 1200px;
@@ -25,7 +28,7 @@
   border-collapse: collapse;
 }
 
-.admin-table th, 
+.admin-table th,
 .admin-table td {
   padding: 12px;
   border-bottom: 1px solid #f0f0f0;
@@ -52,26 +55,20 @@
   background: #3498db;
   color: #fff;
 }
-.btn-edit:hover {
-  background: #2980b9;
-}
+.btn-edit:hover { background: #2980b9; }
 
 .btn-save {
   background: #27ae60;
   color: #fff;
   margin-right: 10px;
 }
-.btn-save:hover {
-  background: #219150;
-}
+.btn-save:hover { background: #219150; }
 
 .btn-cancel {
   background: #e74c3c;
   color: #fff;
 }
-.btn-cancel:hover {
-  background: #c0392b;
-}
+.btn-cancel:hover { background: #c0392b; }
 
 .product-form {
   margin-top: 20px;
@@ -87,4 +84,79 @@
 .product-form .error {
   font-size: 0.85rem;
   color: red;
+}
+
+/* =========================
+   Responsive Fixes
+   ========================= */
+
+/* Tablet: make spacing tighter */
+@media (max-width: 900px) {
+  .admin-container {
+    padding: 20px;
+  }
+  .admin-title {
+    font-size: 1.6rem;
+  }
+  .admin-section {
+    padding: 16px;
+  }
+  .admin-table th,
+  .admin-table td {
+    padding: 10px;
+  }
+}
+
+/* Mobile: stack layout & make table scrollable */
+@media (max-width: 600px) {
+  .admin-container {
+    padding: 15px;
+  }
+  .admin-title {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  .admin-section {
+    padding: 14px;
+    border-radius: 8px;
+  }
+
+  /* Make table scrollable horizontally */
+  .admin-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Smaller thumbnails & buttons */
+  .admin-thumb {
+    width: 40px;
+    height: 40px;
+  }
+  .btn-edit, .btn-save, .btn-cancel {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  /* Stack action buttons vertically if needed */
+  .admin-table td:last-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  /* Form adjustments */
+  .product-form input,
+  .product-form textarea {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 400px) {
+  .btn-edit, .btn-save, .btn-cancel {
+    flex: 1 1 auto;
+    text-align: center;
+  }
 }
