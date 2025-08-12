@@ -2,15 +2,14 @@
 * {
   box-sizing: border-box;
 }
-
 body {
   margin: 0;
   background: linear-gradient(135deg, #f9f6f2 0%, #f1dca7 100%);
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #4a412a;
 }
-/* Registration Form Extensions */
 
+/* Registration Form Extensions */
 .register-back-login {
   margin-top: 22px;
   text-align: center;
@@ -18,11 +17,9 @@ body {
   color: #7d6742;
   user-select: none;
 }
-
 .register-back-login p {
   font-size: 1rem;
 }
-
 .btn-link-login {
   background: none;
   border: none;
@@ -36,13 +33,13 @@ body {
   user-select: none;
   transition: color 0.25s;
 }
-
 .btn-link-login:hover,
 .btn-link-login:focus {
   color: #7c4a13;
   outline: none;
 }
 
+/* Outer Layout */
 .baghub-login-outer {
   display: flex;
   min-height: 100vh;
@@ -53,6 +50,7 @@ body {
   background: linear-gradient(120deg, #f3e8d3 40%, #f9f1dc 100%);
 }
 
+/* Form Container */
 .baghub-login-container {
   background-color: #fff;
   padding: 48px 44px 44px;
@@ -74,11 +72,9 @@ body {
   letter-spacing: 0.04em;
   margin-bottom: 8px;
 }
-
 .baghub-title span {
   color: #b08346;
 }
-
 .baghub-subtitle {
   text-align: center;
   font-size: 1rem;
@@ -89,17 +85,14 @@ body {
 }
 
 /* Form */
-
 form {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
-
 .input-with-icon {
   position: relative;
 }
-
 .input-icon {
   position: absolute;
   left: 14px;
@@ -110,7 +103,6 @@ form {
   pointer-events: none;
   user-select: none;
 }
-
 input[type="email"],
 input[type="password"] {
   width: 100%;
@@ -124,14 +116,12 @@ input[type="password"] {
   outline: none;
   color: #4a412a;
 }
-
 input[type="email"]:focus,
 input[type="password"]:focus {
   border-color: #b08346;
   box-shadow: 0 0 10px 0 rgb(176 130 70 / 0.4);
   background: #fefcf5;
 }
-
 .error-msg {
   color: #c22b2b;
   font-size: 0.91rem;
@@ -141,7 +131,6 @@ input[type="password"]:focus {
 }
 
 /* Submit Button */
-
 .btn-submit {
   background: linear-gradient(90deg, #b08346, #7c4a13);
   border: none;
@@ -155,21 +144,17 @@ input[type="password"]:focus {
   box-shadow: 0 6px 14px rgb(124 74 19 / 0.4);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-
 .btn-submit:hover,
 .btn-submit:focus {
   background: linear-gradient(90deg, #a07632, #634217);
   box-shadow: 0 8px 20px rgb(124 74 19 / 0.6);
-  outline: none;
 }
-
 .btn-submit:active {
   transform: scale(0.98);
   transition: transform 0.1s ease;
 }
 
-/* Hero Image Section */
-
+/* Hero Image */
 .baghub-hero-img {
   flex-shrink: 0;
   border-radius: 24px;
@@ -178,7 +163,6 @@ input[type="password"]:focus {
   box-shadow: 0 20px 48px rgb(124 74 19 / 0.14);
   animation: popIn 1.3s ease forwards;
 }
-
 .baghub-hero-img img {
   display: block;
   width: 100%;
@@ -201,29 +185,15 @@ input[type="password"]:focus {
 
 /* Animations */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(45px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(45px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes popIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-/* Responsive */
-
+/* Tablet */
 @media (max-width: 900px) {
   .baghub-login-outer {
     flex-direction: column;
@@ -238,5 +208,46 @@ input[type="password"]:focus {
     width: 100%;
     max-width: 390px;
     padding: 38px 32px 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .baghub-login-outer {
+    padding: 20px 12px;
+    gap: 24px;
+  }
+  .baghub-login-container {
+    padding: 26px 20px;
+    border-radius: 14px;
+  }
+  .baghub-title {
+    font-size: 1.7rem;
+    margin-bottom: 6px;
+  }
+  .baghub-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  input[type="email"],
+  input[type="password"] {
+    padding: 12px 12px 12px 42px;
+    font-size: 0.95rem;
+  }
+  .btn-submit {
+    padding: 12px 0;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+  .register-back-login p {
+    font-size: 0.92rem;
+  }
+  .btn-link-login {
+    font-size: 0.92rem;
+  }
+  .baghub-hero-img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 16px;
   }
 }
