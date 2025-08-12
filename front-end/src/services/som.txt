@@ -1,0 +1,126 @@
+import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+function App() {
+  const notify = () => toast("Wow so easy!");
+  return (
+    <div>
+      <button onClick={notify}>Notify!</button>
+      <ToastContainer />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+<main className="baghub-detail-container" aria-live="polite">
+        {product ? (
+          <div className="baghub-detail-grid">
+            {/* Left: Product Images */}
+            <section className="baghub-detail-images-section">
+              <img
+                src={selectedImage}
+                alt={`${product.name} (selected)`}
+                className="baghub-detail-image-main"
+                loading="lazy"
+              />
+              <div className="baghub-detail-image-thumbnails">
+                {product.images.map((img, index) => (
+                  <button
+                    key={index}
+                    type="button"
+                    className={`thumbnail-btn ${selectedImage === img ? 'selected' : ''}`}
+                    onClick={() => setSelectedImage(img)}
+                    aria-label={`View image ${index + 1}`}
+                  >
+                    <img
+                      src={img}
+                      alt={`Thumbnail ${index + 1}`}
+                      className="baghub-detail-thumbnail"
+                      loading="lazy"
+                    />
+                  </button>
+                ))}
+              </div>
+            </section>
+
+            {/* Right: Product Info */}
+            <section className="baghub-detail-info-section">
+              <h1 className="baghub-detail-title">{product.name}</h1>
+              <p className="baghub-detail-category">
+                <strong>Category:</strong> {product.category}
+              </p>
+              <p className="baghub-detail-description">{product.description}</p>
+              <p className="baghub-detail-price">₹{product.price.toLocaleString()}</p>
+
+              {/* Action Buttons */}
+              <div className="baghub-action-buttons">
+                <button
+                  className="baghub-btn-buy"
+                  onClick={handleBuyNow}
+                  aria-label="Buy Now"
+                  type="button"
+                >
+                  Buy Now
+                </button>
+                <button
+                  className="baghub-btn-cart"
+                  onClick={handleAddToCart}
+                  disabled={addingToCart}
+                  aria-label={status}
+                  type="button"
+                >
+                  {addingToCart ? 'Adding...' : status}
+                </button>
+              </div>
+
+              {/* Keywords */}
+              <p className="baghub-detail-keywords">
+                <strong>Tags:</strong> {product.keywords?.join(', ') || 'N/A'}
+              </p>
+
+              {/* Reviews */}
+              <section className="baghub-reviews-section">
+              <h2>Customer Reviews</h2>
+                {product.reviews?.length > 0 ? (
+                  <ul className="baghub-reviews-list">
+                    {product.reviews.map((review, idx) => {
+                      if (typeof review === 'string') {
+                        // For string reviews
+                        return (
+                          <li key={idx} className="baghub-review-item">
+                            <p className="baghub-review-comment">"{review}"</p>
+                          </li>
+                        );
+                      } else {
+                        // For object reviews
+                        return (
+                          <li key={idx} className="baghub-review-item">
+                            <div className="baghub-review-header">
+                              <span className="baghub-reviewer-name">{review.customer}</span>
+                              <span className="baghub-review-rating">
+                                {review.rating}/5
+                              </span>
+                            </div>
+                            <p className="baghub-review-comment">"{review.comment}"</p>
+                          </li>
+                        );
+                      }
+                    })}
+                  </ul>
+                ) : (
+                  <p className="baghub-no-reviews">No reviews yet. Be the first to review!</p>
+                )}
+              </section>
+
+            </section>
+          </div>
+        ) : (
+          <div className="baghub-loading">Loading product details...</div>
+        )}
+      </main>

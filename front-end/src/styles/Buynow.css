@@ -1,0 +1,175 @@
+/* ===============================
+   Buy Now Page - Professional Style
+   =============================== */
+
+.buynow-container {
+  padding: 40px 20px;
+  max-width: 950px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.buynow-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #34495e;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 0.03em;
+}
+
+.buynow-card {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #dfe6e9;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.product-section {
+  text-align: center;
+}
+
+.product-section img {
+  max-width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.product-info h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.product-info .price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #27ae60;
+  margin-bottom: 10px;
+}
+
+.product-info .desc {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.order-form h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.order-form input,
+.order-form textarea {
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border 0.3s ease;
+}
+
+.order-form input:focus,
+.order-form textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.order-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.confirm-btn {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.confirm-btn:hover {
+  background: linear-gradient(135deg, #219150, #27ae60);
+}
+
+.buynow-loader,
+.buynow-empty {
+  text-align: center;
+  color: #7f8c8d;
+  margin-top: 50px;
+  font-size: 1.1rem;
+}
+
+.buynow-loader .spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(44, 62, 80, 0.15);
+  border-top-color: #34495e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .buynow-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-option {
+  background: #f8f9fa;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.payment-option.active {
+  border-color: #27ae60;
+  background: #eafaf1;
+  font-weight: 600;
+}
+
+.payment-option.disabled {
+  color: #888;
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.payment-option input {
+  transform: scale(1.1);
+}

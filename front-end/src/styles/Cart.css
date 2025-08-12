@@ -1,0 +1,160 @@
+/* ================================
+   Cart Page Styles - Baghub Theme
+   ================================ */
+
+/* Page container */
+.cart-container {
+ height: 100%;
+ width: 100%;
+
+  /* center horizontally */
+}
+
+/* Title */
+.cart-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Grid layout */
+.cart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  justify-content: center;
+}
+
+/* Card styling */
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+
+  /* Taller + narrower */
+  height: 420px;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+.cart-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Product image */
+.cart-item img {
+  width: 100%;
+  height: 260px; /* taller image */
+  object-fit: cover;
+  background-color: #f9f9f9;
+}
+
+/* Card body */
+.cart-item-body {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cart-item-body h4 {
+  margin: 0 0 8px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.cart-item-body p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.cart-item-body small {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+}
+
+/* Footer */
+.cart-item-footer {
+  padding: 10px 15px;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+}
+
+/* Remove button */
+.cart-remove-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.cart-remove-btn:hover:not(:disabled) {
+  background-color: #c0392b;
+}
+
+.cart-remove-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Empty cart state */
+.cart-empty {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Loader */
+.cart-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.cart-loader .spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .cart-item {
+    max-width: 90%;
+    height: auto; /* allow variable height */
+  }
+  .cart-item img {
+    height: 200px;
+  }
+}

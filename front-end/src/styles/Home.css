@@ -1,0 +1,217 @@
+/* homepage.css - BAGHUB Home Page styling */
+
+.baghub-homepage-outer {
+  max-width: 1120px;
+  margin: 0 auto 80px;
+  padding: 0 24px;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4a412a;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+/* Hero Banner */
+.baghub-hero-banner-home {
+  background: linear-gradient(135deg, #f9f6f2 0%, #f1dca7 100%);
+  border-radius: 28px;
+  box-shadow: 0 20px 56px rgb(124 74 19 / 0.15);
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  user-select: none;
+}
+
+.baghub-hero-title-home {
+  font-size: 3rem;
+  color: #7c4a13;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
+}
+
+.baghub-hero-subtitle-home {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #a67c3c;
+  margin-bottom: 32px;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.baghub-hero-btn-home {
+  background: linear-gradient(90deg, #b08346, #7c4a13);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 40px;
+  font-size: 1.15rem;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgb(176 130 70 / 0.3);
+  transition: background 0.3s ease;
+  user-select: none;
+}
+
+.baghub-hero-btn-home:hover,
+.baghub-hero-btn-home:focus {
+  background: linear-gradient(90deg, #a07632, #634217);
+  outline: none;
+}
+
+/* Featured Categories */
+.baghub-featured-categories {
+  text-align: center;
+  user-select: none;
+}
+
+.baghub-section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #7c4a13;
+  margin-bottom: 36px;
+  letter-spacing: 0.05em;
+}
+
+.baghub-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  justify-items: center;
+}
+
+.baghub-category-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 16px 44px rgb(124 74 19 / 0.14);
+  cursor: pointer;
+  overflow: hidden;
+  width: 260px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.baghub-category-card:hover,
+.baghub-category-card:focus {
+  box-shadow: 0 22px 68px rgb(176 130 70 / 0.25);
+  transform: translateY(-6px);
+  outline: none;
+}
+
+.baghub-category-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1.5px solid #ecd9b9;
+}
+
+.baghub-category-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 16px 0;
+  color: #7c4a13;
+  letter-spacing: 0.03em;
+}
+
+/* Why Choose Us Section */
+
+.baghub-why-choose-us {
+  max-width: 700px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.baghub-why-list {
+  list-style: none;
+  padding-left: 0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #6d5a2d;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+.baghub-view-all-link {
+  display: inline-block;
+  max-width: fit-content; /* Ensures width fits content */
+  width: auto;            /* Override any width forcing full size */
+  padding: 10px 24px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #b08346; /* BAGHUB warm gold tone */
+  text-decoration: none;
+  cursor: pointer;
+  border: 2.2px solid #b08346;
+  border-radius: 30px;
+  transition: 
+    background-color 0.3s ease, 
+    color 0.3s ease, 
+    box-shadow 0.3s ease;
+  user-select: none;
+  letter-spacing: 0.06em;
+  box-shadow: 0 4px 12px rgb(176 130 70 / 0.2);
+  white-space: nowrap; /* Prevent button text from breaking */
+}
+
+/* Hover and focus state */
+.baghub-view-all-link:hover,
+.baghub-view-all-link:focus {
+  background-color: #b08346;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 6px 18px rgb(176 130 70 / 0.35);
+}
+
+/* Active state - optional if using click feedback */
+.baghub-view-all-link:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
+
+/* Responsive - make it bigger on larger screens if needed */
+@media (min-width: 768px) {
+  .baghub-view-all-link {
+    font-size: 1.1rem;
+    padding: 12px 30px;
+  }
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .baghub-hero-title-home {
+    font-size: 2.4rem;
+  }
+  .baghub-hero-subtitle-home {
+    font-size: 1.1rem;
+    max-width: 90vw;
+  }
+  .baghub-featured-categories {
+    margin-bottom: 48px;
+  }
+  .baghub-category-card {
+    width: 90vw;
+    max-width: 320px;
+  }
+  .baghub-categories-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .baghub-hero-title-home {
+    font-size: 1.8rem;
+  }
+  .baghub-categories-grid {
+    grid-template-columns: 1fr;
+  }
+  .baghub-why-list {
+    font-size: 1rem;
+    gap: 10px;
+  }
+}

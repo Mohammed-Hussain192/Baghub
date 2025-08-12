@@ -1,0 +1,107 @@
+/* === Container === */
+.reset-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #fff8ee, #f3e8d3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #4a412a; /* Premium dark coffee text */
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  padding: 1rem;
+}
+
+/* === Card === */
+.reset-form {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 12px 36px rgba(176, 130, 70, 0.18);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ecd9b9;
+}
+
+.reset-title {
+  font-size: 1.9rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+  color: #7c4a13; /* BaghHub main brand brown */
+  letter-spacing: 0.02em;
+}
+
+/* === Fields === */
+label {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  color: #6a5a33;
+  font-weight: 600;
+}
+
+input {
+  padding: 0.75rem;
+  border: 2px solid #ecd9b9;
+  border-radius: 10px;
+  background: #fff8ee;
+  color: #4a412a;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+input:focus {
+  border-color: #b08346;
+  box-shadow: 0 0 8px rgba(176, 130, 70, 0.35);
+}
+
+/* === Button === */
+.reset-submit {
+  background: linear-gradient(90deg, #7c4a13, #b08346);
+  color: #fff;
+  padding: 0.85rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.reset-submit:hover {
+  background: linear-gradient(90deg, #634217, #a07632);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(124, 74, 19, 0.25);
+}
+
+.reset-submit:disabled {
+  background: #e0d4bc;
+  color: #99825f;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* === Messages === */
+.reset-message {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.6rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.reset-message.success {
+  background: rgba(124, 178, 100, 0.12);
+  color: #3e7a3c;
+  border: 1px solid #3e7a3c;
+}
+
+.reset-message.error {
+  background: rgba(176, 59, 46, 0.12);
+  color: #a33a2e;
+  border: 1px solid #a33a2e;
+}

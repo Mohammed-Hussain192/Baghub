@@ -1,0 +1,154 @@
+.track-container {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+  font-family: 'Inter', sans-serif;
+  color: #34495e;
+}
+
+/* Order card */
+.order-card {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.order-image img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-right: 1px solid #f0f0f0;
+  background: #f9f9f9;
+}
+
+.order-details {
+  flex: 1;
+  padding: 20px 25px;
+}
+
+.order-details h2 {
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.order-details p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.order-actions {
+  margin-top: 25px;
+}
+
+/* Buttons */
+.btn-cancel,
+.btn-return {
+  padding: 12px 22px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.btn-cancel {
+  background: #e74c3c;
+  color: #fff;
+  margin-right: 12px;
+}
+
+.btn-cancel:hover {
+  background: #c0392b;
+}
+
+.btn-return {
+  background: #27ae60;
+  color: #fff;
+}
+
+.btn-return:hover {
+  background: #219150;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: #ddd;
+  z-index: 0;
+}
+
+.timeline-step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  max-width: 90px;
+}
+
+.timeline-step .circle {
+  width: 32px;
+  height: 32px;
+  background: #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #555;
+  transition: background-color 0.3s ease;
+}
+
+.timeline-step.active .circle {
+  background: #27ae60;
+  color: #fff;
+  box-shadow: 0 0 8px rgba(39, 174, 96, 0.7);
+}
+
+.timeline-step .label {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #2c3e50;
+  user-select: none;
+}
+
+/* Responsive adjustment */
+@media (max-width: 600px) {
+  .order-card {
+    flex-direction: column;
+  }
+  .order-image img {
+    width: 100%;
+    height: 250px;
+    border-right: none;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  .order-details {
+    padding: 20px 15px;
+  }
+  .timeline {
+    flex-wrap: wrap;
+  }
+  .timeline-step {
+    max-width: 80px;
+    margin-bottom: 15px;
+  }
+}

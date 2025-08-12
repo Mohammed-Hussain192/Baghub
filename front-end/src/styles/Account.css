@@ -1,0 +1,132 @@
+/* ==========================
+   Account Page - Professional Baghub Theme
+   ========================== */
+
+.account-container {
+  padding: 40px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2f3e4d;
+}
+
+.account-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #34495e;
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.account-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #d8e1e7;
+  padding: 30px 25px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.account-card:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.account-details h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  text-transform: capitalize;
+  letter-spacing: 0.02em;
+}
+
+.account-details p {
+  margin: 8px 0;
+  color: #57606a;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.account-actions {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.account-btn {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  color: white;
+  padding: 14px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 28px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(41, 128, 185, 0.5);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.account-btn:hover {
+  background: linear-gradient(135deg, #2574a9, #2980b9);
+  box-shadow: 0 8px 25px rgba(41, 128, 185, 0.7);
+}
+
+.account-btn.secondary {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.5);
+}
+
+.account-btn.secondary:hover {
+  background: linear-gradient(135deg, #219150, #27ae60);
+  box-shadow: 0 8px 25px rgba(39, 174, 96, 0.7);
+}
+
+.account-btn.danger {
+  background: linear-gradient(135deg, #c0392b, #e74c3c);
+  box-shadow: 0 5px 15px rgba(192, 57, 43, 0.5);
+}
+
+.account-btn.danger:hover {
+  background: linear-gradient(135deg, #a93226, #c0392b);
+  box-shadow: 0 8px 25px rgba(192, 57, 43, 0.7);
+}
+
+/* Loader */
+.account-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.account-loader .spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(47, 62, 77, 0.15);
+  border-top-color: #34495e;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Empty state */
+.account-empty {
+  text-align: center;
+  margin-top: 70px;
+  font-size: 1.15rem;
+  color: #7f8c8d;
+  font-weight: 600;
+  font-style: italic;
+}
