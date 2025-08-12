@@ -1,4 +1,7 @@
-/* Detail.css */
+/* ===============================
+   Baghub Detail & Review Styles
+   =============================== */
+
 /* Review Section */
 .baghub-reviews-section {
   margin-top: 2rem;
@@ -6,7 +9,6 @@
   border-top: 1px solid #ddd;
 }
 
-/* Reviews List */
 .baghub-reviews-list {
   list-style: none;
   padding: 0;
@@ -43,7 +45,6 @@
   color: #555;
 }
 
-/* No reviews text */
 .baghub-no-reviews {
   font-style: italic;
   color: #888;
@@ -64,14 +65,12 @@
   color: #222;
 }
 
-/* Labels */
 .baghub-review-form label {
   font-weight: 600;
   margin-bottom: 0.3rem;
   color: #333;
 }
 
-/* Inputs and Textarea */
 .baghub-review-form input,
 .baghub-review-form select,
 .baghub-review-form textarea {
@@ -92,7 +91,6 @@
   box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
 }
 
-/* Submit Button */
 .baghub-btn-submit-review {
   padding: 0.6rem 1rem;
   background-color: #0073e6;
@@ -114,7 +112,6 @@
   cursor: not-allowed;
 }
 
-/* Error messages */
 .error-message {
   color: #d93025;
   font-size: 0.875rem;
@@ -122,103 +119,12 @@
   margin-bottom: 0.6rem;
 }
 
-/* Accessibility */
 [aria-invalid="true"] {
   border-color: #d93025 !important;
   box-shadow: 0 0 5px rgba(217, 48, 37, 0.5) !important;
 }
 
-
-.baghub-detail-container {
-  max-width: 100%;
-  margin: 72px auto 80px;
-  height: 100%;
-  padding: 0 24px;
-  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #4a412a;
-  display: flex;
-  justify-content: center;
-  
-}
-
-.baghub-detail-card {
-  background: #7c4a13;
-  border-radius: 20px;
-  box-shadow: 0 18px 48px rgb(124 74 19 / 0.15);
-  padding: 32px 36px 40px;
-  max-width: 440px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  user-select: none;
-}
-
-.baghub-detail-title {
-  font-size: 2.4rem;
-  color: #7c4a13;
-  font-weight: 800;
-  text-align: center;
-  margin: 0;
-  height: 100%;
-  letter-spacing: 0.04em;
-  user-select: text;
-}
-
-.baghub-detail-images {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.baghub-detail-image {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  border: 2px solid #ecd9b9;
-  box-shadow: 0 8px 35px rgb(176 130 70 / 0.12);
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.baghub-detail-image:hover,
-.baghub-detail-image:focus {
-  transform: scale(1.05);
-  outline: none;
-  cursor: zoom-in;
-}
-
-.baghub-no-image {
-  color: #b08346;
-  font-style: italic;
-  text-align: center;
-}
-
-.baghub-detail-info p {
-  font-size: 1.07rem;
-  color: #6a5a33;
-  line-height: 1.5;
-  margin-bottom: 10px;
-  font-weight: 500;
-  user-select: text;
-}
-
-.baghub-detail-price {
-  font-weight: 700;
-  font-size: 1.3rem;
-  color: #b08346;
-  margin-top: 14px;
-}
-
-.baghub-loading {
-  font-size: 1.2rem;
-  color: #a67c3c;
-  margin-top: 110px;
-  text-align: center;
-  width: 100%;
-}
-/* Detail.css */
-
+/* ---------- PRODUCT DETAIL LAYOUT ---------- */
 .baghub-detail-container {
   max-width: 1200px;
   margin: 80px auto 80px;
@@ -234,6 +140,7 @@
   user-select: none;
 }
 
+/* IMAGE SECTION */
 .baghub-detail-images-section {
   display: flex;
   flex-direction: column;
@@ -260,6 +167,7 @@
 .baghub-detail-image-thumbnails {
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
 
 .thumbnail-btn {
@@ -271,12 +179,10 @@
   flex-shrink: 0;
   outline-offset: 2px;
 }
-
 .thumbnail-btn.selected {
   border-color: #b08346;
   box-shadow: 0 4px 12px rgba(176, 130, 70, 0.4);
 }
-
 .thumbnail-btn img {
   width: 66px;
   height: 66px;
@@ -284,19 +190,18 @@
   border-radius: 10px;
   display: block;
 }
-
 .thumbnail-btn:hover,
 .thumbnail-btn:focus {
   outline: 2px solid #b08346;
   outline-offset: 2px;
 }
 
+/* INFO SECTION */
 .baghub-detail-info-section {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-
 .baghub-detail-title {
   font-size: 2.8rem;
   color: #7c4a13;
@@ -305,20 +210,16 @@
   letter-spacing: 0.04em;
   user-select: text;
 }
-
 .baghub-detail-category,
 .baghub-detail-description,
 .baghub-detail-keywords {
   font-size: 1.12rem;
   line-height: 1.5;
   color: #6a5a33;
-  user-select: text;
 }
-
 .baghub-detail-description {
   font-weight: 500;
 }
-
 .baghub-detail-price {
   font-size: 2rem;
   font-weight: 900;
@@ -326,12 +227,12 @@
   margin-top: 4px;
 }
 
+/* ACTION BUTTONS */
 .baghub-action-buttons {
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
 }
-
 .baghub-btn-buy,
 .baghub-btn-cart {
   border-radius: 12px;
@@ -340,133 +241,83 @@
   font-size: 1.15rem;
   cursor: pointer;
   border: none;
-  box-shadow: 0 10px 36px rgba(176,130,70,0.22);
+  box-shadow: 0 10px 36px rgba(176, 130, 70, 0.22);
   transition: background 0.3s ease, transform 0.15s ease;
-  user-select: none;
   flex: 1 1 140px;
   text-align: center;
 }
-
 .baghub-btn-buy {
   background: linear-gradient(90deg, #7c4a13, #b08346);
   color: white;
 }
-
 .baghub-btn-buy:hover,
 .baghub-btn-buy:focus {
   background: linear-gradient(90deg, #634217, #a07632);
-  outline: none;
   transform: scale(1.05);
 }
-
 .baghub-btn-cart {
   background: #f3e8d3;
   color: #7c4a13;
   border: 2.5px solid #b08346;
 }
-
 .baghub-btn-cart:hover,
 .baghub-btn-cart:focus {
   background: #b08346;
   color: #fff;
-  outline: none;
   transform: scale(1.05);
 }
-
 .baghub-btn-cart:disabled {
   background: #e0d4bc;
   color: #99825f;
   cursor: not-allowed;
   box-shadow: none;
-  transform: none;
 }
 
-.baghub-detail-keywords strong {
-  font-weight: 700;
-}
-
+/* REVIEWS STYLE */
 .baghub-reviews-section {
   margin-top: 24px;
 }
-
 .baghub-reviews-section h2 {
   color: #7c4a13;
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 18px;
-  user-select: none;
 }
-
 .baghub-reviews-list {
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
-
 .baghub-review-item {
   background: #fff8ee;
   border-radius: 18px;
-  box-shadow: 0 6px 24px rgb(176 130 70 / 0.12);
   padding: 16px 22px;
-  user-select: text;
 }
-
 .baghub-review-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
-  gap: 16px;
 }
-
 .baghub-reviewer-name {
   font-weight: 600;
   font-size: 1.05rem;
-  color: #7c4a13;
 }
-
 .baghub-review-rating {
-  color: #b08346;
   font-size: 1.18rem;
-  user-select: none;
 }
-
-.star {
-  margin-right: 2px;
-}
-
-.star.empty {
-  color: #dcd6c9;
-}
-
 .baghub-review-comment {
   font-style: italic;
-  color: #5f4c1a;
   font-size: 1rem;
-  margin: 0;
 }
-
 .baghub-no-reviews {
-  font-style: italic;
-  color: #a6863d;
   font-size: 1rem;
-  user-select: none;
 }
 
-.baghub-loading {
-  font-size: 1.3rem;
-  color: #a67c3c;
-  margin-top: 120px;
-  text-align: center;
-  width: 100%;
-  user-select: none;
-}
+/* ========================
+   RESPONSIVE FIXES
+   ======================== */
 
-/* Responsive */
-
+/* Tablet */
 @media (max-width: 960px) {
   .baghub-detail-grid {
     grid-template-columns: 1fr;
@@ -485,28 +336,54 @@
   }
 }
 
-
-/* Responsive */
-
+/* Mobile */
 @media (max-width: 600px) {
   .baghub-detail-container {
-    margin: 40px 16px 60px;
+    margin: 40px 12px 50px;
+    padding: 0 12px;
   }
-
-  .baghub-detail-card {
-    padding: 24px 20px 32px;
-    max-width: 100%;
-  }
-
   .baghub-detail-title {
     font-size: 1.9rem;
+    text-align: center;
   }
-
   .baghub-detail-info p {
+    font-size: 0.95rem;
+  }
+  .baghub-detail-price {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .baghub-detail-image-main {
+    aspect-ratio: auto;
+    max-height: 300px;
+  }
+  .thumbnail-btn img {
+    width: 54px;
+    height: 54px;
+  }
+  .baghub-action-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .baghub-btn-buy,
+  .baghub-btn-cart {
+    font-size: 1rem;
+    padding: 12px;
+  }
+  /* Review form on small screens */
+  .baghub-review-form {
+    max-width: 100%;
+  }
+  .baghub-review-item {
+    padding: 12px 16px;
+  }
+  .baghub-reviewer-name {
     font-size: 1rem;
   }
-
-  .baghub-detail-price {
-    font-size: 1.2rem;
+  .baghub-review-rating {
+    font-size: 1rem;
+  }
+  .baghub-review-comment {
+    font-size: 0.95rem;
   }
 }
