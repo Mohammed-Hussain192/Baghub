@@ -1,7 +1,7 @@
 // OrderConfirmed.jsx
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import "../styles/Ordercon.css";
+import "../styles/ordercon.css";
 import { useNavigate } from "react-router-dom";
 
 
