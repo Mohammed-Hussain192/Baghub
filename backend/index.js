@@ -18,8 +18,8 @@ const order = require('./models/order');
 
 app.use(cors({
   origin: [
-     // local dev
-    "https://baghub-clie.onrender.com" // deployed frontend
+    "http://localhost:5173", // local dev
+     // production
   ],
   credentials: true
 }));
@@ -370,13 +370,13 @@ app.post('/product/:id/review', async (req, res) => {
   }
 
   try {
-    const Product = await product.findOne({id:productId});
-    if (!product) return res.status(404).json({ success: false, message: 'Product not found' });
+    const Productdoc = await product.findOne({id:productId});
+    if (!productdoc) return res.status(404).json({ success: false, message: 'Product not found' });
 
     // Add the new review
-    Product.reviews.push({ customer, rating, comment });
+    Productdoc.reviews.push({ customer, rating, comment });
 
-    await Product.save();
+    await Productdoc.save();
 
     res.json({ success: true, message: 'Review added successfully' });
   } catch (error) {
@@ -396,7 +396,7 @@ app.post('/order/cancel/:orderId',async  (req, res) => {
     return res.status(400).json({ success: false, error: 'Email is required' });
   }
 
-  const order = Order.findOne({id:orderId,email:email});
+  const order = await Order.findOne({id:orderId,email:email});
   if (!order) {
     return res.status(404).json({ success: false, error: 'Order not found' });
   }
@@ -455,7 +455,7 @@ app.put('/admin/products/:id', (req, res) => {
   const id = req.params.id;
   const { name, price, stock, description, image } = req.body;
 
-  const productIndex = products.findIndex(p => p.id === id);
+  const productIndex = product.findIndex(p => p.id === id);
   if (productIndex === -1) {
     return res.status(404).json({ success: false, error: 'Product not found' });
   }
