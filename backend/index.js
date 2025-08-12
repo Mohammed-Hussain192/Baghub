@@ -17,8 +17,11 @@ const cart = require('./models/cart');
 const order = require('./models/order');
 
 app.use(cors({
-  origin: 'http://localhost:5173', // Vite dev server
-  credentials: true // If you're using cookies/sessions
+  origin: [
+    "http://localhost:5173", // local dev
+    "https://baghub-clie.onrender.com" // deployed frontend
+  ],
+  credentials: true
 }));
 
 app.use(express.json());
