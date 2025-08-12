@@ -18,7 +18,7 @@ const order = require('./models/order');
 
 app.use(cors({
   origin: [
-    "http://localhost:5173", // local dev
+     // local dev
     "https://baghub-clie.onrender.com" // deployed frontend
   ],
   credentials: true
