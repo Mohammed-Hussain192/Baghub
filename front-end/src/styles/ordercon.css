@@ -1,13 +1,16 @@
+/* ====== Order Success Page Styles ====== */
 .order-container {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh; /* safer for small devices */
   background: linear-gradient(135deg, #f3f4f6, #ffffff);
   overflow: hidden;
   font-family: "Poppins", sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .check-circle {
@@ -29,7 +32,6 @@
 .sentences {
   text-align: center;
 }
-
 .sentence {
   font-size: 1.2rem;
   color: #333;
@@ -37,6 +39,14 @@
 }
 
 /* Confetti */
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
 .confetti-piece {
   position: absolute;
   top: -20px;
@@ -45,6 +55,14 @@
   background-color: hsl(var(--hue), 80%, 60%);
   opacity: 0.9;
 }
+/* Random colors */
+.confetti-piece:nth-child(odd) { background-color: #ff5f5f; }
+.confetti-piece:nth-child(even) { background-color: #ffd166; }
+.confetti-piece:nth-child(3n) { background-color: #06d6a0; }
+.confetti-piece:nth-child(4n) { background-color: #118ab2; }
+.confetti-piece:nth-child(5n) { background-color: #ef476f; }
+
+/* Button */
 .orders-btn {
   margin-top: 25px;
   padding: 12px 28px;
@@ -58,35 +76,42 @@
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .orders-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
+/* ========= Responsive Adjustments ========= */
 
-.confetti {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+/* Tablet */
+@media (max-width: 768px) {
+  .check-circle {
+    width: 120px;
+    height: 120px;
+    font-size: 3rem;
+    margin-bottom: 24px;
+  }
+  .sentence {
+    font-size: 1.05rem;
+  }
 }
 
-/* Random colors for confetti */
-.confetti-piece:nth-child(odd) {
-  background-color: #ff5f5f;
-}
-.confetti-piece:nth-child(even) {
-  background-color: #ffd166;
-}
-.confetti-piece:nth-child(3n) {
-  background-color: #06d6a0;
-}
-.confetti-piece:nth-child(4n) {
-  background-color: #118ab2;
-}
-.confetti-piece:nth-child(5n) {
-  background-color: #ef476f;
+/* Mobile */
+@media (max-width: 480px) {
+  .check-circle {
+    width: 100px;
+    height: 100px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  .sentence {
+    font-size: 0.95rem;
+    margin: 6px 0;
+  }
+  .orders-btn {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 0.95rem;
+    border-radius: 6px;
+  }
 }
