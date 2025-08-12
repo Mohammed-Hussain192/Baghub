@@ -18,7 +18,7 @@ const ResetPassword = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:4000/reset-password", {
+      const res = await axios.post("https://baghub-by-mohammed.onrender.com/reset-password", {
         email: email,
         newPassword: data.newPassword
       });
