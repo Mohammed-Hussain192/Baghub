@@ -23,7 +23,7 @@ const ForgotPassword = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:4000/forgetpass", { email: data.email });
+      const res = await axios.post("https://baghub-by-mohammed.onrender.com/forgetpass", { email: data.email });
       if (res.data.success) {
         setMessage("OTP sent to your email if it exists in our system.");
         setEmailStored(data.email);
