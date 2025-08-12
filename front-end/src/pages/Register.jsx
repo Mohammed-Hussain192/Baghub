@@ -20,7 +20,7 @@ export default function App() {
   const navigate = useNavigate();
 const onSubmit = async (data) => {
   try {
-    const response = await axios.post('http://localhost:4000/register', {
+    const response = await axios.post('https://baghub-by-mohammed.onrender.com/register', {
       name: data.fullname,
       email: data.email,
       password: data.password,
