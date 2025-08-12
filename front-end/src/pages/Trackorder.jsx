@@ -17,7 +17,7 @@ export default function TrackOrderPage() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await axios.get(`http://localhost:4000/order/track/${orderId}`, {
+        const res = await axios.get(`https://baghub-by-mohammed.onrender.com/order/track/${orderId}`, {
           params: { email: Cookies.get("email") },
         });
         setOrder(res.data.orders || null);
@@ -34,7 +34,7 @@ export default function TrackOrderPage() {
   const handleCancelOrder = async () => {
     if (!window.confirm("Are you sure you want to cancel this order?")) return;
     try {
-      const res = await axios.post(`http://localhost:4000/order/cancel/${orderId}`, {
+      const res = await axios.post(`https://baghub-by-mohammed.onrender.com/order/cancel/${orderId}`, {
         email: Cookies.get("email"),
       });
       if (res.data.success) {
@@ -55,7 +55,7 @@ export default function TrackOrderPage() {
     console.log(data)
     if (!window.confirm("Are you sure you want to return this order?")) return;
     try {
-      const res = await axios.post(`http://localhost:4000/order/return/${orderId}`, {
+      const res = await axios.post(`https://baghub-by-mohammed.onrender.com/order/return/${orderId}`, {
         email: Cookies.get("email"),
       });
       if (res.data.success) {
