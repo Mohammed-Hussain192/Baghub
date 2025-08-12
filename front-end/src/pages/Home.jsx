@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Product from '../components/Product';
 import Navbar from '../components/Navbar';
-import '../styles/home.css';
+import '../styles/Home.css';
 import { Link, useLocation } from 'react-router-dom';
 
 
