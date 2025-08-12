@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useForm } from "react-hook-form";
-import "../styles/BuyNow.css";
+import "../styles/Buynow.css";
 
 const BuyNow = () => {
   const { productId } = useParams();
