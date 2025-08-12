@@ -1,5 +1,6 @@
-/* homepage.css - BAGHUB Home Page styling */
-
+/* ====================================
+   BAGHUB Home Page Styling
+   ==================================== */
 .baghub-homepage-outer {
   max-width: 1120px;
   margin: 0 auto 80px;
@@ -55,7 +56,6 @@
   transition: background 0.3s ease;
   user-select: none;
 }
-
 .baghub-hero-btn-home:hover,
 .baghub-hero-btn-home:focus {
   background: linear-gradient(90deg, #a07632, #634217);
@@ -67,7 +67,6 @@
   text-align: center;
   user-select: none;
 }
-
 .baghub-section-title {
   font-size: 2.4rem;
   font-weight: 700;
@@ -75,14 +74,12 @@
   margin-bottom: 36px;
   letter-spacing: 0.05em;
 }
-
 .baghub-categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 28px;
   justify-items: center;
 }
-
 .baghub-category-card {
   background: #fff;
   border-radius: 20px;
@@ -92,21 +89,18 @@
   width: 260px;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-
 .baghub-category-card:hover,
 .baghub-category-card:focus {
   box-shadow: 0 22px 68px rgb(176 130 70 / 0.25);
   transform: translateY(-6px);
   outline: none;
 }
-
 .baghub-category-image {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-bottom: 1.5px solid #ecd9b9;
 }
-
 .baghub-category-name {
   font-weight: 700;
   font-size: 1.25rem;
@@ -116,13 +110,11 @@
 }
 
 /* Why Choose Us Section */
-
 .baghub-why-choose-us {
   max-width: 700px;
   margin: 0 auto;
   user-select: none;
 }
-
 .baghub-why-list {
   list-style: none;
   padding-left: 0;
@@ -134,55 +126,40 @@
   gap: 12px;
   text-align: left;
 }
+
+/* View All Link */
 .baghub-view-all-link {
   display: inline-block;
-  max-width: fit-content; /* Ensures width fits content */
-  width: auto;            /* Override any width forcing full size */
+  max-width: fit-content;
+  width: auto;
   padding: 10px 24px;
   font-weight: 600;
   font-size: 1rem;
-  color: #b08346; /* BAGHUB warm gold tone */
+  color: #b08346;
   text-decoration: none;
   cursor: pointer;
   border: 2.2px solid #b08346;
   border-radius: 30px;
-  transition: 
-    background-color 0.3s ease, 
-    color 0.3s ease, 
-    box-shadow 0.3s ease;
-  user-select: none;
-  letter-spacing: 0.06em;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 12px rgb(176 130 70 / 0.2);
-  white-space: nowrap; /* Prevent button text from breaking */
+  letter-spacing: 0.06em;
+  white-space: nowrap;
 }
-
-/* Hover and focus state */
 .baghub-view-all-link:hover,
 .baghub-view-all-link:focus {
   background-color: #b08346;
   color: #fff;
-  outline: none;
   box-shadow: 0 6px 18px rgb(176 130 70 / 0.35);
 }
-
-/* Active state - optional if using click feedback */
 .baghub-view-all-link:active {
   transform: scale(0.97);
-  transition: transform 0.1s ease;
 }
 
-/* Responsive - make it bigger on larger screens if needed */
-@media (min-width: 768px) {
-  .baghub-view-all-link {
-    font-size: 1.1rem;
-    padding: 12px 30px;
-  }
-}
-
-
-/* Responsive */
-
+/* Tablet adjustments */
 @media (max-width: 900px) {
+  .baghub-hero-banner-home {
+    padding: 40px 20px;
+  }
   .baghub-hero-title-home {
     font-size: 2.4rem;
   }
@@ -190,28 +167,64 @@
     font-size: 1.1rem;
     max-width: 90vw;
   }
-  .baghub-featured-categories {
-    margin-bottom: 48px;
-  }
   .baghub-category-card {
-    width: 90vw;
+    width: 90%;
     max-width: 320px;
   }
   .baghub-categories-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
 
+/* Mobile adjustments */
 @media (max-width: 480px) {
+  .baghub-homepage-outer {
+    gap: 48px;
+    padding: 0 16px;
+  }
+  .baghub-hero-banner-home {
+    padding: 30px 18px;
+    border-radius: 16px;
+  }
   .baghub-hero-title-home {
     font-size: 1.8rem;
+    margin-bottom: 14px;
+  }
+  .baghub-hero-subtitle-home {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .baghub-hero-btn-home {
+    font-size: 1rem;
+    padding: 12px 28px;
+    border-radius: 8px;
+  }
+  .baghub-section-title {
+    font-size: 1.8rem;
+    margin-bottom: 28px;
   }
   .baghub-categories-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .baghub-category-card {
+    width: 100%;
+    border-radius: 16px;
+  }
+  .baghub-category-image {
+    height: 160px;
+  }
+  .baghub-category-name {
+    font-size: 1.1rem;
   }
   .baghub-why-list {
-    font-size: 1rem;
-    gap: 10px;
+    font-size: 0.95rem;
+    gap: 8px;
+  }
+  .baghub-view-all-link {
+    font-size: 0.95rem;
+    padding: 8px 20px;
+    border-radius: 24px;
   }
 }
