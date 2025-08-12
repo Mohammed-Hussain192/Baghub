@@ -1,7 +1,6 @@
 /* ===============================
    Buy Now Page - Professional Style
    =============================== */
-
 .buynow-container {
   padding: 40px 20px;
   max-width: 950px;
@@ -134,13 +133,6 @@
   }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .buynow-card {
-    grid-template-columns: 1fr;
-  }
-}
-
 .payment-options {
   display: flex;
   flex-direction: column;
@@ -172,4 +164,75 @@
 
 .payment-option input {
   transform: scale(1.1);
+}
+
+/* ===============================
+   Responsive Fixes
+   =============================== */
+
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+  .buynow-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+  .buynow-container {
+    padding: 20px 12px;
+    max-width: 100%;
+  }
+
+  .buynow-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 0.02em;
+  }
+
+  .buynow-card {
+    padding: 15px;
+    border-radius: 10px;
+    gap: 15px;
+  }
+
+  .product-section img {
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  .product-info h4 {
+    font-size: 1.1rem;
+  }
+
+  .product-info .price {
+    font-size: 1rem;
+  }
+
+  .product-info .desc {
+    font-size: 0.9rem;
+  }
+
+  .order-form h3 {
+    font-size: 1.05rem;
+  }
+
+  .order-form input,
+  .order-form textarea {
+    font-size: 0.95rem;
+    padding: 8px 10px;
+  }
+
+  .confirm-btn {
+    font-size: 0.95rem;
+    padding: 10px;
+    border-radius: 20px;
+  }
+
+  .payment-option {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
 }
