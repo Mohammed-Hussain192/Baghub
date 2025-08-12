@@ -1,19 +1,20 @@
-/* ================================
+/* ========
    Cart Page Styles - Baghub Theme
-   ================================ */
+   ======== */
 
 /* Page container */
 .cart-container {
- height: 100%;
- width: 100%;
-
-  /* center horizontally */
+  width: 100%;
+  padding: 30px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Title */
 .cart-title {
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #222;
   text-align: center;
   margin-bottom: 25px;
@@ -38,8 +39,6 @@
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
-
-  /* Taller + narrower */
   height: 420px;
   max-width: 260px;
   margin: 0 auto;
@@ -53,7 +52,7 @@
 /* Product image */
 .cart-item img {
   width: 100%;
-  height: 260px; /* taller image */
+  height: 260px;
   object-fit: cover;
   background-color: #f9f9f9;
 }
@@ -148,13 +147,53 @@
   }
 }
 
-/* Mobile adjustments */
+/* ========= Responsive Adjustments ========= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 20px 15px;
+  }
+  .cart-title {
+    font-size: 1.6rem;
+  }
+  .cart-grid {
+    gap: 20px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 576px) {
+  .cart-container {
+    padding: 15px 10px;
+  }
+  .cart-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
   .cart-item {
-    max-width: 90%;
-    height: auto; /* allow variable height */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
   }
   .cart-item img {
     height: 200px;
+  }
+  .cart-item-body {
+    padding: 12px;
+  }
+  .cart-item-body h4 {
+    font-size: 1rem;
+  }
+  .cart-item-body p {
+    font-size: 0.95rem;
+  }
+  .cart-item-body small {
+    font-size: 0.85rem;
+  }
+  .cart-remove-btn {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+    border-radius: 4px;
   }
 }
