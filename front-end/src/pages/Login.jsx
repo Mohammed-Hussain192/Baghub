@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
-import '../styles/login.css'; // Assuming your styles are defined
+import '../styles/login.css';
 import Cookies from 'js-cookie';
 
 const Login = () => {
@@ -16,6 +16,7 @@ const Login = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
+  const [isSubmitting, setIsSubmitting] = useState(false); // 👈 New state
 
   // Show toast if redirected with message
   useEffect(() => {
@@ -25,27 +26,29 @@ const Login = () => {
   }, [location.state]);
 
   const onSubmit = async (data) => {
+    setIsSubmitting(true); // Show "Processing..."
     try {
-      const response = await axios.post('https://baghub-by-mohammed.onrender.com/login', {
-        email: data.email,
-        password: data.password
-      });
+      const response = await axios.post(
+        'https://baghub-by-mohammed.onrender.com/login',
+        {
+          email: data.email,
+          password: data.password
+        }
+      );
 
       if (response.data.success) {
         Cookies.set('email', response.data.email, { expires: 7 });
-        // Store user data in cookies
-        const token = Cookies.get('email');
-        console.log(token); // "abc123"
-
         navigate('/home', {
           state: { toastMessage: 'Login successful' }
         });
       } else {
         toast.error('Invalid credentials');
+        setIsSubmitting(false); // reset if error
       }
     } catch (err) {
       console.error(err);
       toast.error('Login failed');
+      setIsSubmitting(false);
     }
   };
 
@@ -59,7 +62,6 @@ const Login = () => {
         <p className="baghub-subtitle">
           Your premium bag shopping experience awaits.
         </p>
-
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           {/* Email */}
           <div className="input-with-icon">
@@ -74,11 +76,10 @@ const Login = () => {
                 }
               })}
               aria-invalid={errors.email ? 'true' : 'false'}
+              disabled={isSubmitting}
             />
           </div>
-          {errors.email && (
-            <p className="error-msg">{errors.email.message}</p>
-          )}
+          {errors.email && <p className="error-msg">{errors.email.message}</p>}
 
           {/* Password */}
           <div className="input-with-icon">
@@ -93,16 +94,22 @@ const Login = () => {
                 }
               })}
               aria-invalid={errors.password ? 'true' : 'false'}
+              disabled={isSubmitting}
             />
           </div>
           {errors.password && (
             <p className="error-msg">{errors.password.message}</p>
           )}
-          <Link to='/forgetpassword'>Frogot password ?</Link>
+
+          <Link to="/forgetpassword">Forgot password ?</Link>
 
           {/* Submit */}
-          <button type="submit" className="btn-submit">
-            Sign In
+          <button
+            type="submit"
+            className="btn-submit"
+            disabled={isSubmitting} // prevent multiple clicks
+          >
+            {isSubmitting ? 'Processing...' : 'Sign In'}
           </button>
         </form>
 
@@ -112,6 +119,7 @@ const Login = () => {
           <button
             className="btn-register"
             onClick={() => navigate('/register')}
+            disabled={isSubmitting}
           >
             Register
           </button>
