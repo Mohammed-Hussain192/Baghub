@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/P.css'; // Ensure this CSS file is created for styling
+import '../styles/p.css'; // Ensure this CSS file is created for styling
 import { useEffect } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
