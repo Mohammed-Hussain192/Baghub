@@ -18,12 +18,20 @@ import TrackOrderPage from './pages/Trackorder';
 import AdminDashboard from './pages/Admin';
 import ForgotPassword from './pages/Forgetpassword';
 import ResetPassword from './pages/Confimpass';
+import CheckRoute from './services/Check';
 
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Base />} />
+     
+      <Route element={<CheckRoute/>}>
+
+       <Route path="/" element={<Base />} />
+      </Route>
+
+
+
       <Route path="/login" element={<AuthForm />} />
       <Route path="/register" element={<Register />} />
       <Route path='/admin' element={<AdminDashboard/>} />
