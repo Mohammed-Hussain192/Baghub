@@ -1,9 +1,9 @@
-/* ProductList.css - BAGHUB Product List Page Styling */
-
+/* ==========================================
+   ProductList.css - BAGHUB Product List Page
+   ========================================== */
 * {
   box-sizing: border-box;
 }
-
 body, html {
   margin: 0;
   padding: 0;
@@ -21,6 +21,7 @@ body, html {
   gap: 48px;
 }
 
+/* ---------- Hero Banner ---------- */
 .baghub-hero-banner {
   width: 100%;
   min-height: 140px;
@@ -53,6 +54,7 @@ body, html {
   font-weight: 500;
 }
 
+/* Highlight Points */
 .baghub-highlight-list {
   margin: 0;
   padding-left: 19px;
@@ -61,12 +63,11 @@ body, html {
   font-weight: 600;
   list-style: none;
 }
-
 .baghub-highlight-list li {
   margin-bottom: 5px;
-  padding-left: 0;
 }
 
+/* Page Title */
 .baghub-title {
   font-size: 2.4rem;
   font-weight: 700;
@@ -78,32 +79,29 @@ body, html {
   line-height: 1.2;
 }
 
+/* ---------- Products Grid ---------- */
 .baghub-products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 28px;
   align-items: stretch;
 }
-
 .baghub-products-grid > * {
   animation: fadeInUp 0.7s ease forwards;
 }
-
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(25px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
+/* =========================
+   Tablet Breakpoint
+   ========================= */
 @media (max-width: 900px) {
   .baghub-productlist-outer {
-    max-width: 90vw;
+    max-width: 94%;
     margin: 40px auto 60px;
+    gap: 40px;
   }
   .baghub-hero-content {
     padding: 24px 28px;
@@ -123,22 +121,46 @@ body, html {
   }
 }
 
+/* =========================
+   Mobile Breakpoint
+   ========================= */
 @media (max-width: 480px) {
+  .baghub-productlist-outer {
+    margin: 28px auto 50px;
+    padding: 0 16px;
+    gap: 32px;
+  }
   .baghub-hero-banner {
     min-height: auto;
-    padding: 24px 20px;
+    padding: 18px;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
   }
   .baghub-hero-content {
     padding: 0;
   }
   .baghub-hero-title {
     font-size: 1.5rem;
+    margin-bottom: 8px;
   }
   .baghub-hero-intro {
     font-size: 0.95rem;
+    margin-bottom: 14px;
+  }
+  .baghub-highlight-list {
+    font-size: 0.9rem;
+    padding-left: 0;
+    text-align: center;
+  }
+  .baghub-highlight-list li {
+    margin-bottom: 3px;
   }
   .baghub-title {
     font-size: 1.6rem;
     margin-top: 0;
+  }
+  .baghub-products-grid {
+    gap: 16px;
   }
 }
