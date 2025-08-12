@@ -1,5 +1,6 @@
-/* Product.css - BAGHUB Product Card Styles */
-
+/* ========================
+   BagHub Product Card Styles
+   ======================== */
 .baghub-product-card {
   background: #fff;
   border-radius: 20px;
@@ -20,6 +21,7 @@
   box-shadow: 0 22px 60px rgb(124 74 19 / 0.22);
 }
 
+/* Image Wrapper */
 .baghub-product-img-wrapper {
   position: relative;
   overflow: hidden;
@@ -43,6 +45,7 @@
   transform: scale(1.08) rotate(-3deg);
 }
 
+/* Tag */
 .baghub-product-tag {
   position: absolute;
   top: 12px;
@@ -58,6 +61,7 @@
   letter-spacing: 0.04em;
 }
 
+/* Title */
 .baghub-product-title {
   font-weight: 700;
   font-size: 1.3rem;
@@ -66,6 +70,7 @@
   line-height: 1.2;
 }
 
+/* Description */
 .baghub-product-description {
   font-size: 0.95rem;
   color: #7d6742;
@@ -79,6 +84,7 @@
   -webkit-box-orient: vertical;
 }
 
+/* Price */
 .baghub-product-price {
   font-size: 1.25rem;
   font-weight: 700;
@@ -86,6 +92,7 @@
   margin-bottom: 16px;
 }
 
+/* Button */
 .baghub-product-btn {
   background: linear-gradient(90deg, #b08346, #7c4a13);
   border: none;
@@ -101,15 +108,82 @@
   width: 100%;
   user-select: none;
 }
-
 .baghub-product-btn:hover,
 .baghub-product-btn:focus {
   background: linear-gradient(90deg, #a07632, #634217);
   box-shadow: 0 8px 20px rgb(124 74 19 / 0.6);
-  outline: none;
 }
-
 .baghub-product-btn:active {
   transform: scale(0.98);
   transition: transform 0.1s ease;
+}
+
+/* ========================
+   Responsive Adjustments
+   ======================== */
+
+/* Tablet (2 columns look) */
+@media (max-width: 900px) {
+  .baghub-product-card {
+    max-width: 100%;
+    padding: 18px;
+  }
+  .baghub-product-img-wrapper {
+    height: 190px;
+  }
+  .baghub-product-title {
+    font-size: 1.2rem;
+  }
+  .baghub-product-description {
+    font-size: 0.93rem;
+  }
+  .baghub-product-price {
+    font-size: 1.15rem;
+  }
+}
+
+/* Mobile (Full width, stacked) */
+@media (max-width: 600px) {
+  .baghub-product-card {
+    max-width: 100%;
+    padding: 16px;
+    border-radius: 16px;
+  }
+  .baghub-product-img-wrapper {
+    height: 170px;
+  }
+  .baghub-product-img {
+    width: 85%;
+    max-height: 150px;
+  }
+  .baghub-product-title {
+    font-size: 1.1rem;
+  }
+  .baghub-product-price {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+  }
+  .baghub-product-btn {
+    font-size: 0.95rem;
+    padding: 10px 0;
+    border-radius: 8px;
+  }
+  .baghub-product-description {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 4; /* More lines on mobile */
+  }
+}
+
+/* Small devices (very narrow) */
+@media (max-width: 400px) {
+  .baghub-product-card {
+    padding: 14px;
+  }
+  .baghub-product-img-wrapper {
+    height: 150px;
+  }
+  .baghub-product-img {
+    width: 90%;
+    max-height: 130px;
+  }
 }
