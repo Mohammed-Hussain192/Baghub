@@ -1,3 +1,4 @@
+/* ====== Track Order Page ====== */
 .track-container {
   padding: 30px;
   max-width: 900px;
@@ -6,7 +7,7 @@
   color: #34495e;
 }
 
-/* Order card */
+/* ==== Order Card ==== */
 .order-card {
   display: flex;
   background: #fff;
@@ -43,9 +44,12 @@
 
 .order-actions {
   margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-/* Buttons */
+/* ==== Buttons ==== */
 .btn-cancel,
 .btn-return {
   padding: 12px 22px;
@@ -60,9 +64,7 @@
 .btn-cancel {
   background: #e74c3c;
   color: #fff;
-  margin-right: 12px;
 }
-
 .btn-cancel:hover {
   background: #c0392b;
 }
@@ -71,12 +73,11 @@
   background: #27ae60;
   color: #fff;
 }
-
 .btn-return:hover {
   background: #219150;
 }
 
-/* Timeline */
+/* ==== Timeline ==== */
 .timeline {
   display: flex;
   justify-content: space-between;
@@ -130,7 +131,25 @@
   user-select: none;
 }
 
-/* Responsive adjustment */
+/* ========================
+   Responsive Adjustments
+   ======================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .order-image img {
+    width: 180px;
+    height: 180px;
+  }
+  .order-details h2 {
+    font-size: 1.4rem;
+  }
+  .timeline-step .label {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile */
 @media (max-width: 600px) {
   .order-card {
     flex-direction: column;
@@ -142,13 +161,46 @@
     border-bottom: 1px solid #f0f0f0;
   }
   .order-details {
-    padding: 20px 15px;
+    padding: 18px 15px;
+  }
+  .order-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .btn-cancel,
+  .btn-return {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 0.95rem;
   }
   .timeline {
     flex-wrap: wrap;
+    row-gap: 18px;
+    justify-content: center;
+  }
+  .timeline::before {
+    display: none; /* Remove horizontal line for wrapped steps */
   }
   .timeline-step {
     max-width: 80px;
-    margin-bottom: 15px;
+    flex: 1 1 60px;
+  }
+}
+
+/* Very Small Devices */
+@media (max-width: 400px) {
+  .order-details h2 {
+    font-size: 1.2rem;
+  }
+  .order-details p {
+    font-size: 0.9rem;
+  }
+  .timeline-step .circle {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+  .timeline-step .label {
+    font-size: 0.85rem;
   }
 }
