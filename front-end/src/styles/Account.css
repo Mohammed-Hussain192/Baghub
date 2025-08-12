@@ -1,7 +1,6 @@
-/* ==========================
+/* ======
    Account Page - Professional Baghub Theme
-   ========================== */
-
+   ====== */
 .account-container {
   padding: 40px 20px;
   max-width: 500px;
@@ -29,7 +28,6 @@
   text-align: center;
   transition: box-shadow 0.3s ease;
 }
-
 .account-card:hover {
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
 }
@@ -72,7 +70,6 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
-
 .account-btn:hover {
   background: linear-gradient(135deg, #2574a9, #2980b9);
   box-shadow: 0 8px 25px rgba(41, 128, 185, 0.7);
@@ -82,7 +79,6 @@
   background: linear-gradient(135deg, #27ae60, #2ecc71);
   box-shadow: 0 5px 15px rgba(39, 174, 96, 0.5);
 }
-
 .account-btn.secondary:hover {
   background: linear-gradient(135deg, #219150, #27ae60);
   box-shadow: 0 8px 25px rgba(39, 174, 96, 0.7);
@@ -92,7 +88,6 @@
   background: linear-gradient(135deg, #c0392b, #e74c3c);
   box-shadow: 0 5px 15px rgba(192, 57, 43, 0.5);
 }
-
 .account-btn.danger:hover {
   background: linear-gradient(135deg, #a93226, #c0392b);
   box-shadow: 0 8px 25px rgba(192, 57, 43, 0.7);
@@ -105,7 +100,6 @@
   align-items: center;
   height: 60vh;
 }
-
 .account-loader .spinner {
   width: 50px;
   height: 50px;
@@ -114,7 +108,6 @@
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
-
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -129,4 +122,46 @@
   color: #7f8c8d;
   font-weight: 600;
   font-style: italic;
+}
+
+/* ========= Responsive Mobile First ========= */
+@media (max-width: 600px) {
+  .account-container {
+    padding: 20px 10px;
+    max-width: 100%;
+  }
+
+  .account-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    letter-spacing: 0.02em;
+  }
+
+  .account-card {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+
+  .account-details h4 {
+    font-size: 1.25rem;
+  }
+
+  .account-details p {
+    font-size: 0.95rem;
+  }
+
+  .account-btn {
+    padding: 12px 0;
+    font-size: 1rem;
+    border-radius: 24px;
+  }
+
+  .account-actions {
+    gap: 12px;
+  }
+
+  .account-empty {
+    margin-top: 40px;
+    font-size: 1rem;
+  }
 }
