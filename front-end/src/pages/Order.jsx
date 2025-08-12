@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
-import '../styles/Order.css';
+import '../styles/order.css';
 import SimpleNavbar from '../components/Navbar';
 import { useNavigate } from 'react-router-dom';
 
