@@ -35,7 +35,7 @@ const Detail = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`https://baghub-by-mohammed.onrender.com//product/${id}`);
+        const response = await axios.get(`https://baghub-by-mohammed.onrender.com/product/${id}`);
         const data = response.data;
         setProduct(data);
         if (data.images && data.images.length > 0) {
