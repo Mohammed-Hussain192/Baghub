@@ -19,7 +19,7 @@ const AdminDashboard = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/admin/products");
+      const res = await axios.get("https://baghub-by-mohammed.onrender.com/admin/products");
       setProducts(res.data || []);
     } catch (err) {
       console.error("Error fetching products:", err);
@@ -28,7 +28,7 @@ const AdminDashboard = () => {
 
   const fetchOrders = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/admin/orders");
+      const res = await axios.get("https://baghub-by-mohammed.onrender.com/admin/orders");
       setOrders(res.data || []);
     } catch (err) {
       console.error("Error fetching orders:", err);
@@ -45,7 +45,7 @@ const AdminDashboard = () => {
   const onSubmitProduct = async (data) => {
     try {
       const res = await axios.put(
-        `http://localhost:4000/admin/products/${selectedProduct.id}`,
+        `https://baghub-by-mohammed.onrender.com/admin/products/${selectedProduct.id}`,
         data
       );
       if (res.data.success) {
@@ -66,7 +66,7 @@ const AdminDashboard = () => {
     try {
      
 const res = await axios.put(
-  `http://localhost:4000/admin/orders/${orderId}`,
+  `https://baghub-by-mohammed.onrender.com/admin/orders/${orderId}`,
   { status, email: Cookies.get("email") }
 );
       if (res.data.success) {
