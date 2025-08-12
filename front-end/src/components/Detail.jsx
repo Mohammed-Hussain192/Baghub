@@ -35,7 +35,7 @@ const Detail = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/product/${id}`);
+        const response = await axios.get(`https://baghub-by-mohammed.onrender.com/product/${id}`);
         const data = response.data;
         setProduct(data);
         if (data.images && data.images.length > 0) {
@@ -55,7 +55,7 @@ const Detail = () => {
         const email = Cookies.get("email");
         if (!email) return;
 
-        const res = await axios.get(`http://localhost:4000/check/${id}`, {
+        const res = await axios.get(`https://baghub-by-mohammed.onrender.com/check/${id}`, {
           params: { email },
         });
 
@@ -83,7 +83,7 @@ const Detail = () => {
     setAddingToCart(true);
 
     try {
-      const res = await axios.get(`http://localhost:4000/addtocart/${id}`, {
+      const res = await axios.get(`https://baghub-by-mohammed.onrender.com/addtocart/${id}`, {
         params: { email },
       });
 
@@ -117,7 +117,7 @@ const Detail = () => {
     setSubmittingReview(true);
 
     try {
-      const res = await axios.post(`http://localhost:4000/product/${id}/review`, data);
+      const res = await axios.post(`https://baghub-by-mohammed.onrender.com/product/${id}/review`, data);
 
       if (res.data.success) {
         toast.success("Review submitted successfully!");
